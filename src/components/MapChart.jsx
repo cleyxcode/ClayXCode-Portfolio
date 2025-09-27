@@ -31,7 +31,7 @@ const MapChart = () => {
         }
       </Geographies>
       <Annotation
-        subject={[29.2, 40.9784]}
+        subject={[117.285, -0.789]} // koordinat Indonesia
         dx={-90}
         dy={-30}
         connectorProps={{
@@ -41,7 +41,7 @@ const MapChart = () => {
         }}
       >
         <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="black">
-          {"Istanbul"}
+          {"Indonesia"}
         </text>
       </Annotation>
     </ComposableMap>

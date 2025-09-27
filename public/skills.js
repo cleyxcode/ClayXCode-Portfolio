@@ -22,6 +22,5 @@ export const skillsData = [
   "C#",
   "Docker",
   "Laravel",
-  "Mysql",
   "livewire"
 ];

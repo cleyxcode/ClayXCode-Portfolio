@@ -42,14 +42,18 @@ const ContactPage = () => {
       transition={{ duration: 1 }}
     >
       <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 p-4 space-y-8 lg:space-y-0">
+        {/* Map */}
         <div className="h-[300px] lg:h-full lg:w-1/2 flex items-center justify-center text-6xl p-2">
           <MapChart />
         </div>
+
+        {/* Contact Form */}
         <form
           onSubmit={sendEmail}
           ref={form}
           className="h-3/5 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-6 justify-center p-6 sm:p-8 lg:p-24"
         >
+          {/* Animated Title */}
           <div className="text-center text-2xl sm:text-2xl lg:text-6xl mb-4">
             {text.split("").map((letter, index) => (
               <motion.span
@@ -68,13 +72,16 @@ const ContactPage = () => {
             😊
           </div>
 
-          <span className="text-sm sm:text-base">Dear Mehmet,</span>
+          {/* Message */}
+          <span className="text-sm sm:text-base">Dear Bradley,</span>
           <textarea
             rows={4}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none text-sm sm:text-base"
             name="user_message"
             placeholder="Your message..."
           />
+
+          {/* Sender Email */}
           <span className="text-sm sm:text-base">My mail address is:</span>
           <input
             name="user_email"
@@ -82,17 +89,23 @@ const ContactPage = () => {
             placeholder="Your email"
             className="bg-transparent border-b-2 border-b-black outline-none text-sm sm:text-base"
           />
-          <span className="text-sm sm:text-base">Mehmet's e-mail address</span>
+
+          {/* Your Email (fixed) */}
+          <span className="text-sm sm:text-base">Bradley's e-mail address</span>
           <input
             type="text"
-            placeholder="mehmetsalihbozkir@gmail.com"
+            placeholder="bredley.tuhuleruw@gmail.com"
             className="bg-transparent border-b-2 border-b-black outline-none text-sm sm:text-base"
             disabled
           />
+
+          {/* Regards */}
           <span className="text-sm sm:text-base">Regards</span>
           <button className="bg-purple-200 rounded font-semibold text-gray-600 p-3 sm:p-4 text-sm sm:text-base">
             Send
           </button>
+
+          {/* Status Messages */}
           {success && (
             <span className="text-green-600 font-semibold text-sm sm:text-base text-center">
               Your message has been sent successfully!

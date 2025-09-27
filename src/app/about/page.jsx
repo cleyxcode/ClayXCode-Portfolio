@@ -42,22 +42,22 @@ const AboutPage = () => {
             <h1 className="font-bold text-2xl">MY BIOGRAPHY</h1>
 
             <p className="text-lg">
-              Saya adalah seorang <b>Backend Developer</b>, <b>Software Developer</b>, dan <b>Game Developer</b> 
-              yang passionate dalam membangun aplikasi real-world yang menyelesaikan masalah dan memberikan 
-              value kepada pengguna. Journey saya dimulai dari eksperimen project kecil, dan sekarang fokus 
-              pada delivering solusi lengkap — dari sistem backend hingga full-stack web dan mobile applications.
+              I am a <b>Backend Developer</b>, <b>Software Developer</b>, and <b>Game Developer</b> 
+              passionate about building real-world applications that solve problems and deliver 
+              value to users. My journey started with small project experiments, and now I focus 
+              on delivering complete solutions — from backend systems to full-stack web and mobile applications.
             </p>
 
             <p className="text-lg">
-              Sebagian besar karya saya berkisar di sekitar <b>PHP/Laravel</b>, <b>Filament</b>, <b>MySQL</b>, 
-              dan framework modern. Saya juga mendalami <b>Flutter/Dart</b> untuk mobile development, 
-              <b>Unity dengan C#</b> untuk game development, serta <b>Kotlin</b> untuk Android native development.
+              Most of my work revolves around <b>Laravel</b>, <b>React</b>, <b>MySQL</b>, 
+              and modern frameworks. I also explore <b>Flutter/Dart</b> for mobile development, 
+              <b>Unity with C#</b> for game development, and <b>Kotlin</b> for Android native development.
             </p>
 
             <p className="text-lg">
-              Dengan <b>18+ repositories</b> di GitHub, saya telah mengerjakan berbagai project mulai dari 
-              sistem manajemen untuk TVRI Maluku, aplikasi healthcare AI, AR learning apps, hingga game interaktif. 
-              Saya selalu excited untuk mengeksplorasi teknologi baru dan menciptakan solusi inovatif.
+              With <b>18+ repositories</b> on GitHub, I have worked on various projects ranging from 
+              management systems for TVRI Maluku, AI healthcare apps, AR learning applications, to interactive games. 
+              I am always excited to explore new technologies and create innovative solutions.
             </p>
 
             <span className="italic">
@@ -183,9 +183,9 @@ const AboutPage = () => {
                     TVRI Maluku Developer
                   </div>
                   <div className="p-3 text-sm italic">
-                    • <b>Web Surat Masuk TVRI</b> - Document management system<br/>
-                    • <b>Sistem Arsip TVRI</b> - Digital archive platform<br/>
-                    Backend development using PHP & MySQL for government institution
+                    • <b>TVRI Incoming Mail Web</b> - Document management system<br/>
+                    • <b>TVRI Archive System</b> - Digital archive platform<br/>
+                    Backend development using PHP & MySQL for a government institution
                   </div>
                   <div className="p-3 text-red-400 text-sm font-semibold">
                     2024 - 2025
@@ -213,7 +213,7 @@ const AboutPage = () => {
                   </div>
                   <div className="p-3 text-sm italic">
                     • <b>Sinara App</b> - Full-stack health management (PHP + Flutter)<br/>
-                    • <b>Resep Makanan API</b> - Nutrition API development<br/>
+                    • <b>Food Recipe API</b> - Nutrition API development<br/>
                     Collaborated with Universitas Indonesia Maluku
                   </div>
                   <div className="p-3 text-green-400 text-sm font-semibold">
@@ -259,8 +259,8 @@ const AboutPage = () => {
                   </div>
                   <div className="p-3 text-sm italic">
                     • <b>Admin Panel</b> - Universal dashboard system<br/>
-                    • <b>Filament Kasir</b> - POS system with Laravel Filament<br/>
-                    • <b>Website Profil Gereja</b> - Church management system<br/>
+                    • <b>Filament POS</b> - POS system with Laravel Filament<br/>
+                    • <b>Church Profile Website</b> - Church management system<br/>
                     • Multiple CRUD applications (Laravel, Kotlin)
                   </div>
                   <div className="p-3 text-yellow-400 text-sm font-semibold">
