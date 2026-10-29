@@ -152,7 +152,7 @@ const AboutPage = () => {
               initial={{ x: "-300px" }}
               animate={isExperienceRefInView ? { x: "0" } : {}}
             >
-              {/* Latest Projects 2025 */}
+              {/* Latest Projects */}
               <div className="flex justify-between h-64">
                 <div className="w-1/3 "></div>
                 <div className="w-1/6 flex justify-center">
@@ -162,16 +162,19 @@ const AboutPage = () => {
                 </div>
                 <div className="w-1/3 ">
                   <div className="bg-blue-600 bg-opacity-80 p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Recent Projects 2025
+                    Proyek Terbaru
                   </div>
                   <div className="p-3 text-sm italic">
-                    • <b>Website Pisang</b> - E-commerce platform (Laravel Blade)<br/>
-                    • <b>Cari Sekolah</b> - School finder app (TypeScript)<br/>
-                    • <b>Game ID Wizard</b> - Gaming utility tool<br/>
-                    • <b>Skin Cancer Detection</b> - AI healthcare app (Flutter)
+                    • <b>Web Monitoring KKN UKIM</b> - Monitoring kegiatan KKN<br/>
+                    • <b>Manyian DLS Dua Sabat Lama</b> - Aplikasi digital<br/>
+                    • <b>Machine Learning & IoT</b> - Integrasi ML dan IoT<br/>
+                    • <b>Aplikasi Penyiraman Tanaman</b> - Desa Kilo, Pulau Seram<br/>
+                    • <b>GAS-IPAS</b> - Web game interaktif untuk anak SD<br/>
+                    • <b>SD Negeri 12 Passo</b> - Sistem informasi sekolah<br/>
+                    • <b>SI Angkatan Muda Gereja</b> - Website organisasi gereja
                   </div>
                   <div className="p-3 text-blue-400 text-sm font-semibold">
-                    Sep 2025
+                    Proyek terbaru
                   </div>
                 </div>
               </div>

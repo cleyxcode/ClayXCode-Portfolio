@@ -7,56 +7,76 @@ import { PiProjectorScreen } from "react-icons/pi";
 const items = [
   {
     id: 1,
-    title: "e-commerceWebsite",
-    desc: "An e-commerce website. Built with Laravel Blade as a special project.",
-    img: "/pisang.png",
-    link: "https://github.com/cleyxcode/website-pisang",
-    demo: "#",
-    tech: "Blade",
-    updated: "Sep 25, 2025"
+    title: "Web Monitoring KKN UKIM",
+    desc: "Website monitoring kegiatan Kuliah Kerja Nyata Universitas Kristen Indonesia Maluku.",
+    img: "/place.png",
+    link: "#",
+    demo: "https://kkntematikukim.site/",
+    tech: "Web Application",
+    updated: "Proyek Terbaru"
   },
   {
     id: 2,
-    title: "School Finder",
-    desc: "A school search platform built with TypeScript. Helping students find the right school.",
-    img: "/carisekolah.png",
-    link: "https://github.com/cleyxcode/cari-sekolah",
+    title: "Manyian DLS Dua Sabat Lama",
+    desc: "Aplikasi Manyian DLS Dua Sabat Lama untuk mendukung kebutuhan digital komunitas.",
+    img: "/place.png",
+    link: "#",
     demo: "#",
-    tech: "TypeScript",
-    updated: "Sep 22, 2025"
+    tech: "Mobile Application",
+    updated: "Proyek Terbaru"
   },
   {
     id: 3,
-    title: "Sinara App",
-    desc: "A modern management application built with PHP. Full-featured for data and administration handling.",
-    img: "/sinara.jpeg",
-    link: "https://github.com/cleyxcode/sinara-app",
+    title: "Machine Learning & IoT",
+    desc: "Website yang menggabungkan machine learning dan Internet of Things untuk pemantauan data secara terintegrasi.",
+    img: "/place.png",
+    link: "#",
     demo: "#",
-    tech: "PHP",
-    updated: "Sep 20, 2025"
+    tech: "Machine Learning / IoT",
+    updated: "Proyek Terbaru"
   },
   {
     id: 4,
-    title: "Game ID Wizard",
-    desc: "A tool for managing Game IDs with TypeScript. User-friendly interface with high performance.",
-    img: "/gameid.png",
-    link: "https://github.com/cleyxcode/gameid-wizard",
+    title: "Aplikasi Penyiraman Tanaman",
+    desc: "Mobile app untuk mendukung penyiraman tanaman di Desa Kilo, Pulau Seram.",
+    img: "/place.png",
+    link: "#",
     demo: "#",
-    tech: "TypeScript",
-    updated: "Sep 2, 2025"
+    tech: "Mobile App / IoT",
+    updated: "Proyek Terbaru"
   },
   {
     id: 5,
-    title: "Skin Cancer Detection",
-    desc: "A Flutter mobile app for detecting skin cancer using AI. Innovative healthcare technology.",
+    title: "Sistem Informasi SD Negeri 12 Passo",
+    desc: "Website sistem informasi untuk SD Negeri 12 Passo, Ambon.",
     img: "/place.png",
-    link: "https://github.com/cleyxcode/skin-cancer-flutter",
-    demo: "#",
-    tech: "Dart/Flutter",
-    updated: "Aug 15, 2025"
+    link: "#",
+    demo: "https://sdnegeri1passo.site/",
+    tech: "Web Application",
+    updated: "Proyek Terbaru"
   },
   {
     id: 6,
+    title: "GAS-IPAS",
+    desc: "Web game interaktif untuk membantu anak SD belajar Ilmu Pengetahuan Alam dan Sosial.",
+    img: "/place.png",
+    link: "#",
+    demo: "https://gasipas.site/siswa/login",
+    tech: "Interactive Web Game",
+    updated: "Proyek Terbaru"
+  },
+  {
+    id: 7,
+    title: "SI Angkatan Muda Gereja",
+    desc: "Website sistem informasi Angkatan Muda Gereja untuk mendukung pengelolaan organisasi dan komunitas.",
+    img: "/place.png",
+    link: "#",
+    demo: "https://amrazer.space/",
+    tech: "Web Application",
+    updated: "Proyek Terbaru"
+  },
+  {
+    id: 8,
     title: "Food Recipe API",
     desc: "An API for recipe applications built with Dart. A robust backend for culinary apps.",
     img: "/place.png",
@@ -66,7 +86,7 @@ const items = [
     updated: "Aug 14, 2025"
   },
   {
-    id: 7,
+    id: 9,
     title: "2-Church Profile Website",
     desc: "A profile website for two churches built with Laravel Blade. Elegant design for the community.",
     img: "/place.png",
@@ -76,7 +96,7 @@ const items = [
     updated: "Aug 13, 2025"
   },
   {
-    id: 8,
+    id: 10,
     title: "Timburgan Chess",
     desc: "Play chess via GitHub with a unique concept. An interactive game through GitHub platform.",
     img: "/place.png",
@@ -86,7 +106,7 @@ const items = [
     updated: "Aug 13, 2025"
   },
   {
-    id: 9,
+    id: 11,
     title: "TVRI Mail System",
     desc: "An incoming mail management system for TVRI Maluku. Built with PHP for administrative efficiency.",
     img: "/tvri.png",
@@ -96,7 +116,7 @@ const items = [
     updated: "Aug 12, 2025"
   },
   {
-    id: 10,
+    id: 12,
     title: "Sinara Mobile App",
     desc: "The mobile version of Sinara App built with Flutter. A cross-platform mobile solution.",
     img: "/place.png",
@@ -106,7 +126,7 @@ const items = [
     updated: "Aug 11, 2025"
   },
   {
-    id: 11,
+    id: 13,
     title: "Admin Panel",
     desc: "A universal admin panel built with Laravel Blade. Powerful dashboard for system management.",
     img: "/place.png",
@@ -116,7 +136,7 @@ const items = [
     updated: "Jun 11, 2025"
   },
   {
-    id: 12,
+    id: 14,
     title: "AR Geometry 3D",
     desc: "An Augmented Reality app for learning 3D geometry. Built with C# for interactive experiences.",
     img: "/place.png",
@@ -126,7 +146,7 @@ const items = [
     updated: "Mar 15, 2025"
   },
   {
-    id: 13,
+    id: 15,
     title: "Firebase Project",
     desc: "An Android project with Firebase integration. Built with Kotlin for backend-as-a-service usage.",
     img: "/place.png",
@@ -136,7 +156,7 @@ const items = [
     updated: "Mar 15, 2025"
   },
   {
-    id: 14,
+    id: 16,
     title: "Kotlin CRUD App",
     desc: "A simple CRUD app with Kotlin. Fundamental Android development with database operations.",
     img: "/place.png",
@@ -146,7 +166,7 @@ const items = [
     updated: "Mar 15, 2025"
   },
   {
-    id: 15,
+    id: 17,
     title: "Laravel 11 CRUD (Midterm)",
     desc: "A CRUD application for midterm exams built with Laravel 11. Modern PHP framework implementation.",
     img: "/place.png",
@@ -156,7 +176,7 @@ const items = [
     updated: "Mar 15, 2025"
   },
   {
-    id: 16,
+    id: 18,
     title: "Filament POS",
     desc: "A Point of Sales system built with Laravel Filament. A modern cashier solution for retail businesses.",
     img: "/place.png",
@@ -166,7 +186,7 @@ const items = [
     updated: "Mar 15, 2025"
   },
   {
-    id: 17,
+    id: 19,
     title: "Playlist Manager",
     desc: "A music playlist management app built with PHP. Organize and manage your favorite songs.",
     img: "/place.png",
@@ -176,7 +196,7 @@ const items = [
     updated: "Mar 13, 2025"
   },
   {
-    id: 18,
+    id: 20,
     title: "Movie Watchlist",
     desc: "A movie watchlist app built with Laravel Blade. Track and manage movies you want to watch.",
     img: "/place.png",
@@ -223,16 +243,18 @@ function Card() {
                 {item.desc}
               </p>
               <div className="card-actions justify-between items-center mt-auto">
-                <Link href={item.link} target="_blank" rel="noopener noreferrer">
-                  <motion.button 
-                    className="px-4 py-2 text-sm bg-black bg-opacity-70 text-white hover:bg-opacity-90 font-semibold rounded-lg flex items-center gap-2 transition-all duration-200"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <FaGithub className="text-lg" />
-                    GitHub
-                  </motion.button>
-                </Link>
+                {item.link !== "#" && (
+                  <Link href={item.link} target="_blank" rel="noopener noreferrer">
+                    <motion.button 
+                      className="px-4 py-2 text-sm bg-black bg-opacity-70 text-white hover:bg-opacity-90 font-semibold rounded-lg flex items-center gap-2 transition-all duration-200"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <FaGithub className="text-lg" />
+                      GitHub
+                    </motion.button>
+                  </Link>
+                )}
                 {item.demo !== "#" && (
                   <Link href={item.demo} target="_blank" rel="noopener noreferrer">
                     <motion.button 

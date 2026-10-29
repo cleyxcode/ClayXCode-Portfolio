@@ -9,17 +9,17 @@ import Animation from "@/components/Animation";
 const Homepage = () => {
   return (
     <motion.div
-      className="h-full"
+      className="min-h-full overflow-x-hidden"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
       <Cnsole />
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 p-20">
-        <div className="h-1/2 lg:h-full lg:w-5/12 flex justify-center items-center">
+      <div className="min-h-full flex flex-col lg:flex-row gap-8 lg:gap-0 px-4 py-8 sm:px-8 sm:py-12 md:px-12 lg:px-20 lg:py-20 xl:px-48">
+        <div className="lg:w-5/12 flex justify-center items-center">
           <div className="deneme"></div>
         </div>
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-8 items-center justify-center text-white">
+        <div className="lg:w-1/2 flex flex-col gap-6 lg:gap-8 items-center justify-center text-white">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold text-center lg:text-left"
             initial={{ opacity: 0, x: -50 }}

@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Avenir Next", "SF Pro Display", Inter, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+  font-family: "Avenir Next", "SF Pro Display", Inter, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.035em;
+}
+
 .deneme {
   background-image: url("/Profile_1.webp");
   width: 380px;
@@ -24,8 +47,8 @@
 
 @media (max-width: 768px) {
   .deneme {
-    max-height: 95%;
-    max-width: 80%;
-    margin-bottom: 50%;
+    width: min(72vw, 380px);
+    height: min(72vw, 380px);
+    margin-bottom: 0;
   }
 }

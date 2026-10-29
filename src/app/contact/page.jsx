@@ -36,14 +36,14 @@ const ContactPage = () => {
 
   return (
     <motion.div
-      className="h-full"
+      className="min-h-full overflow-x-hidden"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 p-4 space-y-8 lg:space-y-0">
+      <div className="min-h-full flex flex-col lg:flex-row gap-6 lg:gap-0 px-4 py-6 sm:px-8 md:px-12 lg:px-20 xl:px-48 lg:py-4">
         {/* Map */}
-        <div className="h-[300px] lg:h-full lg:w-1/2 flex items-center justify-center text-6xl p-2">
+        <div className="h-[220px] sm:h-[280px] lg:h-full lg:w-1/2 flex-shrink-0 flex items-center justify-center text-6xl p-2">
           <MapChart />
         </div>
 
@@ -51,17 +51,17 @@ const ContactPage = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-3/5 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-6 justify-center p-6 sm:p-8 lg:p-24"
+          className="h-auto min-h-[620px] lg:min-h-0 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-6 justify-center p-6 sm:p-8 lg:p-24"
         >
           {/* Animated Title */}
-          <div className="text-center text-2xl sm:text-2xl lg:text-6xl mb-4">
+          <div className="text-center text-2xl sm:text-2xl lg:text-6xl mb-4 text-gray-900">
             {text.split("").map((letter, index) => (
               <motion.span
                 key={index}
                 initial={{ opacity: 1 }}
-                animate={{ opacity: 0 }}
+                animate={{ opacity: [1, 0.55, 1] }}
                 transition={{
-                  duration: 3,
+                  duration: 2.5,
                   repeat: Infinity,
                   delay: index * 0.1,
                 }}
