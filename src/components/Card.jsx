@@ -77,6 +77,56 @@ const items = [
   },
   {
     id: 8,
+    title: "e-commerceWebsite",
+    desc: "An e-commerce website. Built with Laravel Blade as a special project.",
+    img: "/pisang.png",
+    link: "https://github.com/cleyxcode/website-pisang",
+    demo: "#",
+    tech: "Blade",
+    updated: "Sep 25, 2025"
+  },
+  {
+    id: 9,
+    title: "School Finder",
+    desc: "A school search platform built with TypeScript. Helping students find the right school.",
+    img: "/carisekolah.png",
+    link: "https://github.com/cleyxcode/cari-sekolah",
+    demo: "#",
+    tech: "TypeScript",
+    updated: "Sep 22, 2025"
+  },
+  {
+    id: 10,
+    title: "Sinara App",
+    desc: "A modern management application built with PHP. Full-featured for data and administration handling.",
+    img: "/sinara.jpeg",
+    link: "https://github.com/cleyxcode/sinara-app",
+    demo: "#",
+    tech: "PHP",
+    updated: "Sep 20, 2025"
+  },
+  {
+    id: 11,
+    title: "Game ID Wizard",
+    desc: "A tool for managing Game IDs with TypeScript. User-friendly interface with high performance.",
+    img: "/gameid.png",
+    link: "https://github.com/cleyxcode/gameid-wizard",
+    demo: "#",
+    tech: "TypeScript",
+    updated: "Sep 2, 2025"
+  },
+  {
+    id: 12,
+    title: "Skin Cancer Detection",
+    desc: "A Flutter mobile app for detecting skin cancer using AI. Innovative healthcare technology.",
+    img: "/place.png",
+    link: "https://github.com/cleyxcode/skin-cancer-flutter",
+    demo: "#",
+    tech: "Dart/Flutter",
+    updated: "Aug 15, 2025"
+  },
+  {
+    id: 13,
     title: "Food Recipe API",
     desc: "An API for recipe applications built with Dart. A robust backend for culinary apps.",
     img: "/place.png",
@@ -86,7 +136,7 @@ const items = [
     updated: "Aug 14, 2025"
   },
   {
-    id: 9,
+    id: 14,
     title: "2-Church Profile Website",
     desc: "A profile website for two churches built with Laravel Blade. Elegant design for the community.",
     img: "/place.png",
@@ -96,7 +146,7 @@ const items = [
     updated: "Aug 13, 2025"
   },
   {
-    id: 10,
+    id: 15,
     title: "Timburgan Chess",
     desc: "Play chess via GitHub with a unique concept. An interactive game through GitHub platform.",
     img: "/place.png",
@@ -106,7 +156,7 @@ const items = [
     updated: "Aug 13, 2025"
   },
   {
-    id: 11,
+    id: 16,
     title: "TVRI Mail System",
     desc: "An incoming mail management system for TVRI Maluku. Built with PHP for administrative efficiency.",
     img: "/tvri.png",
@@ -116,7 +166,7 @@ const items = [
     updated: "Aug 12, 2025"
   },
   {
-    id: 12,
+    id: 17,
     title: "Sinara Mobile App",
     desc: "The mobile version of Sinara App built with Flutter. A cross-platform mobile solution.",
     img: "/place.png",
@@ -126,7 +176,7 @@ const items = [
     updated: "Aug 11, 2025"
   },
   {
-    id: 13,
+    id: 18,
     title: "Admin Panel",
     desc: "A universal admin panel built with Laravel Blade. Powerful dashboard for system management.",
     img: "/place.png",
@@ -136,7 +186,7 @@ const items = [
     updated: "Jun 11, 2025"
   },
   {
-    id: 14,
+    id: 19,
     title: "AR Geometry 3D",
     desc: "An Augmented Reality app for learning 3D geometry. Built with C# for interactive experiences.",
     img: "/place.png",
@@ -146,7 +196,7 @@ const items = [
     updated: "Mar 15, 2025"
   },
   {
-    id: 15,
+    id: 20,
     title: "Firebase Project",
     desc: "An Android project with Firebase integration. Built with Kotlin for backend-as-a-service usage.",
     img: "/place.png",
@@ -156,7 +206,7 @@ const items = [
     updated: "Mar 15, 2025"
   },
   {
-    id: 16,
+    id: 21,
     title: "Kotlin CRUD App",
     desc: "A simple CRUD app with Kotlin. Fundamental Android development with database operations.",
     img: "/place.png",
@@ -166,7 +216,7 @@ const items = [
     updated: "Mar 15, 2025"
   },
   {
-    id: 17,
+    id: 22,
     title: "Laravel 11 CRUD (Midterm)",
     desc: "A CRUD application for midterm exams built with Laravel 11. Modern PHP framework implementation.",
     img: "/place.png",
@@ -176,7 +226,7 @@ const items = [
     updated: "Mar 15, 2025"
   },
   {
-    id: 18,
+    id: 23,
     title: "Filament POS",
     desc: "A Point of Sales system built with Laravel Filament. A modern cashier solution for retail businesses.",
     img: "/place.png",
@@ -186,7 +236,7 @@ const items = [
     updated: "Mar 15, 2025"
   },
   {
-    id: 19,
+    id: 24,
     title: "Playlist Manager",
     desc: "A music playlist management app built with PHP. Organize and manage your favorite songs.",
     img: "/place.png",
@@ -196,7 +246,7 @@ const items = [
     updated: "Mar 13, 2025"
   },
   {
-    id: 20,
+    id: 25,
     title: "Movie Watchlist",
     desc: "A movie watchlist app built with Laravel Blade. Track and manage movies you want to watch.",
     img: "/place.png",

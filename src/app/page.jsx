@@ -9,7 +9,7 @@ import Animation from "@/components/Animation";
 const Homepage = () => {
   return (
     <motion.div
-      className="min-h-full overflow-x-hidden"
+      className="min-h-[calc(100svh-6rem)] overflow-x-hidden pt-[calc(1rem+env(safe-area-inset-top))] pb-[calc(5rem+env(safe-area-inset-bottom))]"
       initial={{ y: "-200vh" }}
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
@@ -17,17 +17,21 @@ const Homepage = () => {
       <Cnsole />
       <div className="min-h-full flex flex-col lg:flex-row gap-8 lg:gap-0 px-4 py-8 sm:px-8 sm:py-12 md:px-12 lg:px-20 lg:py-20 xl:px-48">
         <div className="lg:w-5/12 flex justify-center items-center">
-          <div className="deneme"></div>
+          <img
+            src="/Profile_1.webp"
+            alt="Bredley Tuhuleruw"
+            className="deneme"
+          />
         </div>
         <div className="lg:w-1/2 flex flex-col gap-6 lg:gap-8 items-center justify-center text-white">
           <motion.h1 
-            className="text-4xl md:text-6xl font-bold text-center lg:text-left"
+            className="max-w-full text-[clamp(2rem,9vw,3.75rem)] leading-[1.08] font-bold text-center lg:text-left"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             Code, Create, Innovate: <br />
-            <span className="md:text-5xl bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="block max-w-full break-words bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               <Animation />
             </span>
           </motion.h1>
@@ -44,7 +48,7 @@ const Homepage = () => {
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-6">
-              <motion.div 
+              <motion.div
                 className="px-4 py-2 bg-blue-600 bg-opacity-20 rounded-full border border-blue-400 border-opacity-30"
                 whileHover={{ scale: 1.05 }}
               >
@@ -54,13 +58,13 @@ const Homepage = () => {
                 className="px-4 py-2 bg-green-600 bg-opacity-20 rounded-full border border-green-400 border-opacity-30"
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="text-green-200 text-sm font-medium">Backend Developer</span>
+                <span className="text-green-200 text-sm font-medium">Full Stack Developer</span>
               </motion.div>
               <motion.div 
                 className="px-4 py-2 bg-purple-600 bg-opacity-20 rounded-full border border-purple-400 border-opacity-30"
                 whileHover={{ scale: 1.05 }}
               >
-                <span className="text-purple-200 text-sm font-medium">Full-Stack Ready</span>
+                <span className="text-purple-200 text-sm font-medium">React · Laravel · Node.js</span>
               </motion.div>
             </div>
           </motion.div>

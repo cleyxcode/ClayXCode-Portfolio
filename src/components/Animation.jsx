@@ -18,7 +18,7 @@ function Animation() {
         2300,
         "Laravel & PHP Expertise.",
         2300,
-        "Flutter & Unity Development.",
+        "Full Stack Development.",
         2300,
       ]}
       speed={30}
