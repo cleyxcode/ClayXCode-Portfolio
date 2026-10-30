@@ -14,7 +14,7 @@ const TransitionProvider = ({ children }) => {
     <AnimatePresence mode="wait">
       <div
         key={pathName}
-        className="relative isolate w-full min-h-screen overflow-x-hidden bg-gradient-to-b from-slate-800 to-violet-800"
+        className="site-shell relative isolate w-full min-h-screen overflow-x-hidden"
       >
         <div className="pointer-events-none fixed inset-0 z-0 h-[100svh] min-h-screen opacity-70">
           <GhostFibers

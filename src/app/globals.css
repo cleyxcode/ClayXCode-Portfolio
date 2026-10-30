@@ -5,8 +5,33 @@
 html,
 body {
   min-height: 100%;
-  background: linear-gradient(to bottom, #1e293b, #4c1d95);
+  background: #17112f;
   overflow-x: hidden;
+}
+
+.site-shell {
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 16% 12%, rgba(99, 102, 241, 0.42), transparent 34%),
+    radial-gradient(circle at 84% 82%, rgba(139, 92, 246, 0.38), transparent 38%),
+    linear-gradient(135deg, #172554 0%, #312e81 48%, #581c87 100%);
+  background-size: 140% 140%, 160% 160%, 220% 220%;
+  animation: site-background-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes site-background-drift {
+  0% {
+    background-position: 0% 0%, 100% 100%, 0% 50%;
+  }
+  100% {
+    background-position: 35% 20%, 65% 80%, 100% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-shell {
+    animation: none;
+  }
 }
 
 body {
