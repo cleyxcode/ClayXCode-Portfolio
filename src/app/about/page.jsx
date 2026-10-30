@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRef } from "react";
 import CountdownTimer from "@/components/CountdownTimer";
 import Marq from "@/components/Marq";
+import Lanyard from "@/components/Lanyard";
 
 const AboutPage = () => {
   const containerRef = useRef();
@@ -30,13 +31,29 @@ const AboutPage = () => {
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2 text-white">
           {/* BIOGRAPHY */}
           <div className="flex flex-col gap-12 justify-center">
-            <Image
-              src="/Profile_2.webp"
-              alt="Profile Photo"
-              width={112}
-              height={112}
-              className="w-28 h-28 rounded-full object-cover"
-            />
+            <div className="relative h-[360px] w-full max-w-[360px] sm:h-[440px] sm:max-w-[440px]">
+              <Lanyard
+                frontImage="/Profile_2.webp"
+                backImage="/Profile_2.webp"
+                imageFit="cover"
+                orientation="portrait"
+                finish="glossy"
+                cornerRadius={0.3}
+                size={0.62}
+                anchor="center"
+                strapLength={0.5}
+                strapColor="#111111"
+                strapWidth={0.65}
+                metal="silver"
+                gravity={1}
+                damping={0.5}
+                elasticity={0.5}
+                breeze={0.5}
+                interactive
+                intro
+                className="h-full w-full"
+              />
+            </div>
 
             <h1 className="font-bold text-2xl">MY BIOGRAPHY</h1>
 
