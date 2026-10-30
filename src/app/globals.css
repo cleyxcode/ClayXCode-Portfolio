@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+body.menu-open {
+  overflow: hidden;
+}
+
 .site-shell {
   min-height: 100svh;
   background:

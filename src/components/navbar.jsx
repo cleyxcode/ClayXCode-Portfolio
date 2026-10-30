@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { createPortal } from "react-dom";
 import NavLink from "./navLink";
 import { motion } from "framer-motion";
 import GithubCorner from "react-github-corner";
@@ -17,12 +18,6 @@ const links = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  const closeMenu = () => setOpen(false);
 
   const topVariants = {
     closed: { rotate: 0 },
@@ -44,6 +39,63 @@ const Navbar = () => {
     closed: { x: -10, opacity: 0 },
     opened: { x: 0, opacity: 1 },
   };
+
+  const closeMenu = () => setOpen(false);
+
+  useEffect(() => {
+    closeMenu();
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") closeMenu();
+    };
+    const handleResize = () => {
+      if (window.innerWidth >= 768) closeMenu();
+    };
+    const handleHashChange = () => closeMenu();
+
+    document.body.classList.add("menu-open");
+    document.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      document.body.classList.remove("menu-open");
+      document.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, [open]);
+
+  const mobileOverlay = open && typeof document !== "undefined"
+    ? createPortal(
+        <div className="fixed inset-0 z-[99999] h-[100dvh] min-h-screen w-screen bg-[#0a0a1a] text-white md:hidden">
+          <button
+            type="button"
+            className="fixed right-4 top-4 z-[100001] flex h-10 w-10 flex-col items-center justify-center gap-[6px] rounded bg-transparent"
+            onClick={closeMenu}
+            aria-label="Close menu"
+            aria-expanded="true"
+          >
+            <span className="block h-1 w-10 origin-center rotate-45 rounded bg-white" />
+            <span className="block h-1 w-10 origin-center -rotate-45 rounded bg-white" />
+          </button>
+          <nav className="flex h-full w-full flex-col items-center justify-center gap-8 text-4xl" aria-label="Mobile navigation">
+            {links.map((link) => (
+              <motion.div variants={listItemVariants} initial="closed" animate="opened" key={link.title}>
+                <Link href={link.url} onClick={closeMenu}>
+                  {link.title}
+                </Link>
+              </motion.div>
+            ))}
+          </nav>
+        </div>,
+        document.body
+      )
+    : null;
 
   return (
     <div className="h-full flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl z-50 relative">
@@ -79,23 +131,8 @@ const Navbar = () => {
           <motion.div variants={centerVariants} animate={open ? "opened" : "closed"} className="w-10 h-1 bg-black rounded" />
           <motion.div variants={bottomVariants} animate={open ? "opened" : "closed"} className="w-10 h-1 bg-black rounded origin-left" />
         </button>
-        {open && (
-          <motion.div
-            variants={listVariants}
-            initial="closed"
-            animate="opened"
-            className="fixed inset-0 w-screen h-[100svh] min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center gap-8 text-4xl z-[100] opacity-100"
-          >
-            {links.map((link) => (
-              <motion.div variants={listItemVariants} key={link.title}>
-                <Link href={link.url} onClick={closeMenu}>
-                  {link.title}
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
       </div>
+      {mobileOverlay}
     </div>
   );
 };
