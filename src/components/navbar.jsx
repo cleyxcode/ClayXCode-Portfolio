@@ -62,7 +62,7 @@ const Navbar = () => {
 
       <div className="md:hidden">
         <button
-          className="w-10 h-8 flex flex-col justify-between z-50 relative"
+          className="w-10 h-8 flex flex-col justify-between z-[110] relative"
           onClick={() => setOpen((prev) => !prev)}
           aria-label="Stack Menu"
         >
@@ -75,7 +75,7 @@ const Navbar = () => {
             variants={listVariants}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+            className="fixed inset-0 w-screen h-[100svh] min-h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-[100]"
           >
             {links.map((link) => (
               <motion.div variants={listItemVariants} key={link.title}>

@@ -5,7 +5,6 @@ function Animation() {
   return (
     <TypeAnimation
       sequence={[
-        // Backend Development focus
         "Robust Backend Solutions.",
         2300,
         "Scalable Software Systems.",
