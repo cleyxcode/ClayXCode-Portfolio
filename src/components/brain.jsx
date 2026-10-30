@@ -3,14 +3,14 @@ import Link from "next/link";
 import { motion, useTransform } from "framer-motion";
 
 const Brain = ({ scrollYProgress }) => {
-  const rotatesForward1 = useTransform(scrollYProgress, [0, 1], [0, 360]);
-  const rotatesForward2 = useTransform(scrollYProgress, [0, 1], [0, 180]);
-  const rotatesForward3 = useTransform(scrollYProgress, [0, 1], [0, 90]);
-  const rotatesForward4 = useTransform(scrollYProgress, [0, 1], [0, 45]);
-  const rotatesBackward1 = useTransform(scrollYProgress, [0, 1], [0, -360]);
-  const rotatesBackward2 = useTransform(scrollYProgress, [0, 1], [0, -180]);
-  const rotatesBackward3 = useTransform(scrollYProgress, [0, 1], [0, -90]);
-  const rotatesBackward4 = useTransform(scrollYProgress, [0, 1], [0, -45]);
+  const rotatesForward1 = useTransform(scrollYProgress, [0, 1], [0, 0]);
+  const rotatesForward2 = useTransform(scrollYProgress, [0, 1], [0, 0]);
+  const rotatesForward3 = useTransform(scrollYProgress, [0, 1], [0, 0]);
+  const rotatesForward4 = useTransform(scrollYProgress, [0, 1], [0, 0]);
+  const rotatesBackward1 = useTransform(scrollYProgress, [0, 1], [0, 0]);
+  const rotatesBackward2 = useTransform(scrollYProgress, [0, 1], [0, 0]);
+  const rotatesBackward3 = useTransform(scrollYProgress, [0, 1], [0, 0]);
+  const rotatesBackward4 = useTransform(scrollYProgress, [0, 1], [0, 0]);
   return (
     <div className="w-full h-full">
       <svg width="100%" height="100%">
