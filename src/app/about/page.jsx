@@ -6,15 +6,13 @@ import { useRef } from "react";
 import CountdownTimer from "@/components/CountdownTimer";
 import Marq from "@/components/Marq";
 import Lanyard from "@/components/Lanyard";
+import ExperienceTimeline from "@/components/ExperienceTimeline";
 
 const AboutPage = () => {
   const containerRef = useRef();
   const { scrollYProgress } = useScroll({ container: containerRef });
   const skillRef = useRef();
   const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
-
-  const experienceRef = useRef();
-  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
 
   return (
     <motion.div
@@ -154,166 +152,11 @@ const AboutPage = () => {
           {/* EXPERIENCE */}
           <div
             className="flex flex-col gap-12 justify-center pb-48"
-            ref={experienceRef}
           >
-            <motion.h1
-              initial={{ x: "-300px" }}
-              animate={isExperienceRefInView ? { x: "0" } : {}}
-              transition={{ delay: 0.2 }}
-              className="font-bold text-2xl"
-            >
+            <h1 className="font-bold text-2xl">
               EXPERIENCE & PROJECTS
-            </motion.h1>
-            <motion.div
-              initial={{ x: "-300px" }}
-              animate={isExperienceRefInView ? { x: "0" } : {}}
-            >
-              {/* Latest Projects */}
-              <div className="flex justify-between h-64">
-                <div className="w-1/3 "></div>
-                <div className="w-1/6 flex justify-center">
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-blue-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                <div className="w-1/3 ">
-                  <div className="bg-blue-600 bg-opacity-80 p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Proyek Terbaru
-                  </div>
-                  <div className="p-3 text-sm italic">
-                    • <b>Web Monitoring KKN UKIM</b> - Monitoring kegiatan KKN<br/>
-                    • <b>Manyian DLS Dua Sabat Lama</b> - Aplikasi digital<br/>
-                    • <b>Machine Learning & IoT</b> - Integrasi ML dan IoT<br/>
-                    • <b>Aplikasi Penyiraman Tanaman</b> - Desa Kilo, Pulau Seram<br/>
-                    • <b>GAS-IPAS</b> - Web game interaktif untuk anak SD<br/>
-                    • <b>SD Negeri 12 Passo</b> - Sistem informasi sekolah<br/>
-                    • <b>SI Angkatan Muda Gereja</b> - Website organisasi gereja
-                  </div>
-                  <div className="p-3 text-blue-400 text-sm font-semibold">
-                    Proyek terbaru
-                  </div>
-                </div>
-              </div>
-
-              {/* TVRI Maluku Projects */}
-              <div className="flex justify-between h-64">
-                <div className="w-1/3 ">
-                  <div className="bg-red-600 bg-opacity-80 p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    TVRI Maluku Developer
-                  </div>
-                  <div className="p-3 text-sm italic">
-                    • <b>TVRI Incoming Mail Web</b> - Document management system<br/>
-                    • <b>TVRI Archive System</b> - Digital archive platform<br/>
-                    Backend development using PHP & MySQL for a government institution
-                  </div>
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    2024 - 2025
-                  </div>
-                </div>
-                <div className="w-1/6 flex justify-center">
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                <div className="w-1/3 "></div>
-              </div>
-
-              {/* Healthcare & University Projects */}
-              <div className="flex justify-between h-64">
-                <div className="w-1/3 "></div>
-                <div className="w-1/6 flex justify-center">
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-green-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                <div className="w-1/3 ">
-                  <div className="bg-green-600 bg-opacity-80 p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Healthcare & Education Tech
-                  </div>
-                  <div className="p-3 text-sm italic">
-                    • <b>Sinara App</b> - Full-stack health management (PHP + Flutter)<br/>
-                    • <b>Food Recipe API</b> - Nutrition API development<br/>
-                    Collaborated with Universitas Indonesia Maluku
-                  </div>
-                  <div className="p-3 text-green-400 text-sm font-semibold">
-                    2024
-                  </div>
-                </div>
-              </div>
-
-              {/* Game & AR Development */}
-              <div className="flex justify-between h-64">
-                <div className="w-1/3 ">
-                  <div className="bg-purple-600 bg-opacity-80 p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Game & AR Developer
-                  </div>
-                  <div className="p-3 text-sm italic">
-                    • <b>AR Bangun Ruang</b> - Educational AR app (Unity C#)<br/>
-                    • <b>Timburgan Chess</b> - Interactive GitHub chess game<br/>
-                    3D modeling and augmented reality experiences
-                  </div>
-                  <div className="p-3 text-purple-400 text-sm font-semibold">
-                    2025
-                  </div>
-                </div>
-                <div className="w-1/6 flex justify-center">
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-purple-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                <div className="w-1/3 "></div>
-              </div>
-
-              {/* Full-Stack Development */}
-              <div className="flex justify-between h-64">
-                <div className="w-1/3 "></div>
-                <div className="w-1/6 flex justify-center">
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-yellow-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                <div className="w-1/3 ">
-                  <div className="bg-yellow-600 bg-opacity-80 p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Full-Stack Projects
-                  </div>
-                  <div className="p-3 text-sm italic">
-                    • <b>Admin Panel</b> - Universal dashboard system<br/>
-                    • <b>Filament POS</b> - POS system with Laravel Filament<br/>
-                    • <b>Church Profile Website</b> - Church management system<br/>
-                    • Multiple CRUD applications (Laravel, Kotlin)
-                  </div>
-                  <div className="p-3 text-yellow-400 text-sm font-semibold">
-                    2025
-                  </div>
-                </div>
-              </div>
-
-              {/* Freelancer Journey */}
-              <div className="flex justify-between h-64">
-                <div className="w-1/3 ">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 bg-opacity-80 p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Freelance Developer
-                  </div>
-                  <div className="p-3 text-sm italic">
-                    Delivering backend solutions, mobile apps, and game development 
-                    services using Laravel, Filament, Flutter, Unity, and modern tech stacks.
-                    <br/><b>18+ Public Repositories</b> on GitHub
-                  </div>
-                  <div className="p-3 text-sm font-semibold">
-                    Development Journey
-                  </div>
-                  <div className="text-gradient bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-sm font-semibold">
-                    <CountdownTimer />
-                  </div>
-                </div>
-                <div className="w-1/6 flex justify-center">
-                  <div className="w-1 h-full bg-gray-600 rounded relative">
-                    <div className="absolute w-5 h-5 rounded-full ring-4 ring-gradient-to-r ring-blue-400 bg-white -left-2"></div>
-                  </div>
-                </div>
-                <div className="w-1/3 "></div>
-              </div>
-            </motion.div>
+            </h1>
+            <ExperienceTimeline countdown={<CountdownTimer />} />
           </div>
         </div>
 
