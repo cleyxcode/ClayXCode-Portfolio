@@ -29,7 +29,7 @@ const AboutPage = () => {
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2 text-white">
           {/* BIOGRAPHY */}
           <div className="flex flex-col gap-12 justify-center">
-            <div className="relative h-[360px] w-full max-w-[360px] sm:h-[440px] sm:max-w-[440px]">
+            <div className="relative h-[480px] w-full max-w-[520px] sm:h-[560px] sm:max-w-[600px]">
               <Lanyard
                 frontImage="/Profile_2.webp"
                 backImage="/Profile_2.webp"

@@ -952,7 +952,9 @@ const Lanyard = ({
     const frameView = () => {
       const s = settingsRef.current;
       const aspect = view.width / view.height;
-      let viewHeight = layout.height / clamp(s.size, 0.15, 0.9);
+      // Keep extra breathing room around the card so drag interactions do not
+      // immediately push it outside the camera frustum.
+      let viewHeight = (layout.height / clamp(s.size, 0.15, 0.9)) * 1.45;
       const minimumWidth = layout.width / 0.72;
       if (viewHeight * aspect < minimumWidth) viewHeight = minimumWidth / aspect;
       const viewWidth = viewHeight * aspect;
@@ -1335,7 +1337,7 @@ const Lanyard = ({
   return (
     <div
       ref={containerRef}
-      className={`relative w-full h-full overflow-hidden ${className}`.trim()}
+      className={`relative w-full h-full overflow-visible ${className}`.trim()}
       style={style} />
   );
 };
