@@ -12,7 +12,7 @@ function Social() {
   return (
     <div className="flex gap-4 bg-white p-2 rounded-full bg-opacity-40 text-white">
       <Link
-        href="https://github.com/cleyxodesss"
+        href="https://github.com/cleyxcode"
         target="_blank"
         aria-label="Github Link"
       >

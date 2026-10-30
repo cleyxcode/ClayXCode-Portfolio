@@ -3,8 +3,9 @@ import TransitionProvider from "@/components/transitionProvider";
 import StarsCanvas from "@/components/Star";
 
 export const metadata = {
-  title: "My Portfolio",
-  description: "Personal portfolio page",
+  title: "Bredley Tuhuleruw – Full-Stack Developer",
+  description:
+    "Portfolio Bredley Tuhuleruw, Full-Stack Developer dari Maluku yang membangun web, mobile apps, game, machine learning, dan IoT.",
 };
 
 export const viewport = {

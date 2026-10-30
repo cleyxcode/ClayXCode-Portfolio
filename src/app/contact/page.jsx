@@ -73,7 +73,7 @@ const ContactPage = () => {
           </div>
 
           {/* Message */}
-          <span className="text-sm sm:text-base">Dear Bradley,</span>
+          <span className="text-sm sm:text-base">Dear Bredley,</span>
           <textarea
             rows={4}
             className="bg-transparent border-b-2 border-b-black outline-none resize-none text-sm sm:text-base"
@@ -91,7 +91,7 @@ const ContactPage = () => {
           />
 
           {/* Your Email (fixed) */}
-          <span className="text-sm sm:text-base">Bradley's e-mail address</span>
+          <span className="text-sm sm:text-base">Bredley's e-mail address</span>
           <input
             type="text"
             placeholder="bredley.tuhuleruw@gmail.com"

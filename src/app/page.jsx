@@ -30,7 +30,7 @@ const Homepage = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Code, Create, Innovate: <br />
+            Code, Create, Innovate <br />
             <span className="block max-w-full break-words bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               <Animation />
             </span>
@@ -47,26 +47,6 @@ const Homepage = () => {
               a Full-Stack Developer, Software Developer, and Game Developer from Maluku.
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mt-6">
-              <motion.div
-                className="px-4 py-2 bg-blue-600 bg-opacity-20 rounded-full border border-blue-400 border-opacity-30"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-blue-200 text-sm font-medium">28+ Repositories</span>
-              </motion.div>
-              <motion.div 
-                className="px-4 py-2 bg-green-600 bg-opacity-20 rounded-full border border-green-400 border-opacity-30"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-green-200 text-sm font-medium">Full Stack Developer</span>
-              </motion.div>
-              <motion.div 
-                className="px-4 py-2 bg-purple-600 bg-opacity-20 rounded-full border border-purple-400 border-opacity-30"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="text-purple-200 text-sm font-medium">React · Laravel · Node.js</span>
-              </motion.div>
-            </div>
           </motion.div>
 
           <motion.div
