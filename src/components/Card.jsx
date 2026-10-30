@@ -272,10 +272,13 @@ function Card() {
           <div className="card shadow-xl bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
             <figure className="relative overflow-hidden">
               <img 
-                src={item.img} 
+                src={item.img || "/place.png"}
                 alt={item.title}
                 className="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
-               
+                onError={(event) => {
+                  event.currentTarget.onerror = null;
+                  event.currentTarget.src = "/place.png";
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
             </figure>
