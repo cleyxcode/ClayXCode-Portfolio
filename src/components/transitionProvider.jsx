@@ -4,6 +4,8 @@ import { AnimatePresence } from "framer-motion";
 import Navbar from "./navbar";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import GhostFibers from "./GhostFibers";
+import SwarmCursor from "./SwarmCursor";
 
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
@@ -12,8 +14,38 @@ const TransitionProvider = ({ children }) => {
     <AnimatePresence mode="wait">
       <div
         key={pathName}
-        className="w-full min-h-screen bg-gradient-to-b from-slate-800 to-violet-800"
+        className="relative isolate w-full min-h-screen overflow-x-hidden bg-gradient-to-b from-slate-800 to-violet-800"
       >
+        <div className="pointer-events-none fixed inset-0 z-0 h-[100svh] min-h-screen opacity-70">
+          <GhostFibers
+            glowColor="#8b5cf6"
+            layers={3}
+            twist={1.2}
+            threads={72}
+            fiberStyle="dots"
+            depthOfField={0.85}
+            hoverEffect="none"
+            intro={true}
+            mouseInteraction={false}
+          />
+        </div>
+        <div className="pointer-events-none fixed inset-0 z-[5] h-[100svh] min-h-screen">
+          <SwarmCursor
+            className="h-full w-full"
+            count={600}
+            size={2.2}
+            spread={90}
+            swirl={0.6}
+            tail={0.5}
+            trail={0.6}
+            wander={0.5}
+            depth={0.7}
+            clickEffect="burst"
+            targets="a, button, [data-swarm-target]"
+            intro={true}
+            enabled={true}
+          />
+        </div>
         <motion.div
           className="h-screen w-screen fixed bg-black rounded-b-[100px] z-40"
           animate={{ height: "0vh" }}
@@ -34,10 +66,10 @@ const TransitionProvider = ({ children }) => {
           initial={{ height: "140vh" }}
           animate={{ height: "0vh", transition: { delay: 0.5 } }}
         />
-        <div className="h-24">
+        <div className="relative z-10 h-24">
           <Navbar />
         </div>
-        <div className="min-h-[calc(100dvh-6rem)]">{children} </div>
+        <div className="relative z-10 min-h-[calc(100dvh-6rem)]">{children} </div>
       </div>
     </AnimatePresence>
   );

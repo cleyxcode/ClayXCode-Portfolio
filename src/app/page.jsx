@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Social from "@/components/Social";
 import Transmission from "@/components/Transmission";
 import Animation from "@/components/Animation";
+import ParticleText from "@/components/ParticleText";
 
 const Homepage = () => {
   return (
@@ -30,7 +31,31 @@ const Homepage = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Code, Create, Innovate <br />
+            <ParticleText
+              text="Code, Create, Innovate"
+              className="hero-particle-text"
+              particleSize={2}
+              density={4}
+              color="#ffffff"
+              highlightColor="#a78bfa"
+              highlightMode="motion"
+              shape="circle"
+              intro="gather"
+              scatter={120}
+              gatherDuration={1600}
+              stagger={420}
+              clickBurst
+              burstStrength={0.8}
+              pointerRepel={32}
+              repelRadius={100}
+              idleDrift={0.45}
+              trigger="hover"
+              fontSize="clamp(2rem, 7vw, 3.75rem)"
+              fontWeight={800}
+              fontFamily="inherit"
+              glow
+              style={{ height: "clamp(120px, 18vw, 210px)", minHeight: "120px" }}
+            />
             <span className="block max-w-full break-words bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               <Animation />
             </span>

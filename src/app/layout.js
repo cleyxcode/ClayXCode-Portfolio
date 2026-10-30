@@ -1,6 +1,5 @@
 import "./globals.css";
 import TransitionProvider from "@/components/transitionProvider";
-import StarsCanvas from "@/components/Star";
 
 export const metadata = {
   title: "Bredley Tuhuleruw – Full-Stack Developer",
@@ -19,7 +18,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <TransitionProvider>
-          <StarsCanvas />
           {children}
         </TransitionProvider>
       </body>
