@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import NavLink from "./navLink";
 import { motion } from "framer-motion";
 import GithubCorner from "react-github-corner";
@@ -15,6 +16,13 @@ const links = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  const closeMenu = () => setOpen(false);
 
   const topVariants = {
     closed: { rotate: 0 },
@@ -64,7 +72,8 @@ const Navbar = () => {
         <button
           className="w-10 h-8 flex flex-col justify-between z-[110] relative"
           onClick={() => setOpen((prev) => !prev)}
-          aria-label="Stack Menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
         >
           <motion.div variants={topVariants} animate={open ? "opened" : "closed"} className="w-10 h-1 bg-black rounded origin-left" />
           <motion.div variants={centerVariants} animate={open ? "opened" : "closed"} className="w-10 h-1 bg-black rounded" />
@@ -75,11 +84,13 @@ const Navbar = () => {
             variants={listVariants}
             initial="closed"
             animate="opened"
-            className="fixed inset-0 w-screen h-[100svh] min-h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-[100]"
+            className="fixed inset-0 w-screen h-[100svh] min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center gap-8 text-4xl z-[100] opacity-100"
           >
             {links.map((link) => (
               <motion.div variants={listItemVariants} key={link.title}>
-                <Link href={link.url}>{link.title}</Link>
+                <Link href={link.url} onClick={closeMenu}>
+                  {link.title}
+                </Link>
               </motion.div>
             ))}
           </motion.div>
